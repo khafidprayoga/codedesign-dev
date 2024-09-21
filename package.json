@@ -1,0 +1,3 @@
+{
+  "dependencies": { "@tabler/icons-svelte": "^3.17.0", "install": "^0.13.0" }
+}
