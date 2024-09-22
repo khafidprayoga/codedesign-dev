@@ -34,8 +34,8 @@ dark:bg-twitter-dark dark:text-white
 				alt="tweet author profile"
 			/>
 			<div class="p-5">
-				<h3 id="tweet-author" class=" uppercase">Jane Doe</h3>
-				<p id="tweet-name">@realjanedoe</p>
+				<h3 id="tweet-author" class=" uppercase">Jane Doe Clinton</h3>
+				<p id="tweet-name">@janedoe.xyz</p>
 			</div>
 		</div>
 		<div id="tweet-icon" class="self-center ml-auto mr-3">
