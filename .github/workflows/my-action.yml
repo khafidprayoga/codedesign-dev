@@ -18,6 +18,7 @@ jobs:
           curl -fsSL https://bun.sh/install | bash
           echo "BUN_INSTALL=$HOME/.bun" >> $GITHUB_ENV
           echo "PATH=$BUN_INSTALL/bin:$PATH" >> $GITHUB_PATH
+          source /home/runner/.bashrc 
           bun --version 
 
       - name: Install dependencies
