@@ -28,7 +28,7 @@ jobs:
         run: |
          source /home/runner/.bashrc 
           cd  tweet-embed
-          bun install
+          bun build
 
       - name: Publish To Cloudflare Pages
         uses: cloudflare/pages-action@v1
