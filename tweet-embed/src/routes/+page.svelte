@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { format } from 'fecha';
 	import ProfilePicture from '$lib/assets/profile-pic.jpg';
-	import { IconHeart, IconBrandTwitterFilled} from '@tabler/icons-svelte';
+	import { IconHeart, IconBrandTwitterFilled } from '@tabler/icons-svelte';
 
 	let likeCount: string = '1K';
 	let text = `Why do they call it 'debugging' when it feels more like 'wildly guessing and hoping for the best'? #programming #coding #debugging`;
-
-	const getFormattedText = (text: String) => {
+	const getFormattedText = (text: string) => {
 		return text.replace(
 			/#(\w+)/g,
 			'<span class="text-blue-500 dark:twitter-text-hashtag hover:underline hover:cursor-pointer">#$1</span>'
@@ -14,7 +13,6 @@
 	};
 
 	let publishedAt = format(new Date(), 'MMM D, YYYY');
-
 </script>
 
 <div
@@ -23,8 +21,8 @@
 flex flex-col
 w-1/2
 px-8 py-6
-max-w-lg rounded overflow-hidden shadow-2xl
-bg-white hover:shadow-xl transition-shadow duration-300
+max-w-lg rounded overflow-hidden shadow-
+bg-white hover:shadow-3xl transition-shadow duration-300
 dark:bg-twitter-dark dark:text-white
 "
 >

@@ -5,7 +5,7 @@
 	const toggleTheme = () => {
 		isDarkMode = !isDarkMode;
 		const html = document.documentElement;
-	
+
 		switch (isDarkMode) {
 			case true:
 				html.classList.add('dark');
@@ -14,7 +14,7 @@
 				html.classList.remove('dark');
 				break;
 		}
-	}
+	};
 </script>
 
 <div class="flex items-center space-x-3 mx-auto px-3 py-1 rounded-full">
