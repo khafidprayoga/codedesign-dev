@@ -7,6 +7,7 @@ export default {
       backgroundColor:{
         'twitter-blue': '#ECF8FF',
         'twitter-dark': '#243447',
+        'twitter-dark-base': '#243447',
       },
       textColor:{
         'twitter-hashtag': '#1DA1F2',
