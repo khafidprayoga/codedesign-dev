@@ -1,0 +1,41 @@
+on: 
+  push:
+    tags:
+      - 'tweet-embed@*'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Bun
+        run: |
+          curl -fsSL https://bun.sh/install | bash
+          export BUN_INSTALL="$HOME/.bun"
+          export PATH="$BUN_INSTALL/bin:$PATH"
+          bun --version # Check Bun version to ensure it's installed
+
+      - name: Install dependencies
+        run: |
+          cd  tweet-embed
+          bun install
+
+      - name: Build the app
+        run: |
+          cd  tweet-embed
+          bun install
+
+      - name: Publish To Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_PAGES_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: "tweet-embed" 
+          directory: "build"
+          workingDirectory: "tweet-embed"
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
