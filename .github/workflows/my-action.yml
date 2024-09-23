@@ -39,3 +39,9 @@ jobs:
           directory: "build"
           workingDirectory: "tweet-embed"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+            name: tweet-embed
+            path: tweet-embed/build
+            retention-days: 1
