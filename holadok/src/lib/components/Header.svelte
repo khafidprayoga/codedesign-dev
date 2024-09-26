@@ -1,5 +1,5 @@
 <script>
-    import Logo from "$lib/assets/brand/logo.png";
+    import Logo from "$lib/assets/brand/logo.svg";
 </script>
 
 
@@ -36,14 +36,13 @@
 
 <style lang='postcss'>
     *  {
-        /* border: 1px solid red; */
         @apply text-sm 
     }
 
     .navigation {
         @apply 
         flex w-full justify-between items-center absolute
-        py-2 
+        py-2 px-2 z-10
     }
 
     .navigation-left img {
@@ -74,6 +73,6 @@
     }
 
     .navigation-right span.bordered {
-        @apply border border-black rounded-sm px-3
+        @apply border border-black rounded-sm px-3 
     }
 </style>

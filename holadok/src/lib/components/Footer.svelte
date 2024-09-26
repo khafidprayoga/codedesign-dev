@@ -37,7 +37,7 @@
 
 <style lang="postcss">
 
-.footer {
+    .footer {
 		@apply flex flex-row justify-between gap-3 bg-primary text-gray-100 rounded-sm;
 	}
 
