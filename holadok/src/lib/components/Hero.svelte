@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Doctor from '$lib/assets/brand/doctor.svg';
-	import Overlay from '$lib/assets/brand/background.svg';
+	import doctor from '$lib/assets/brand/doctor.svg';
+	import overlay from '$lib/assets/brand/background.svg';
+	import card from '$lib/assets/brand/card.svg';
 </script>
 
 <div class="hero">
@@ -18,8 +19,9 @@
 	</div>
 
 	<div class="hero-artwork">
-		<img id="artwork-doctor" src={Doctor} alt="Holadoc Doctor Consultant" />
-		<img id="artwork-overlay" src={Overlay} alt="Overlay background" />
+		<img id="artwork-doctor" src={doctor} alt="Holadoc Doctor Consultant" />
+		<img id="artwork-overlay" src={overlay} alt="Overlay background" />
+		<img id="artwork-card" src={card} alt="what people say" />
 	</div>
 </div>
 
@@ -33,7 +35,7 @@
 	}
 
 	.hero-header {
-		@apply text-5xl font-extralight text-gray-900;
+		@apply text-5xl font-light text-gray-900;
 	}
 
 	.hero-description {
@@ -54,5 +56,9 @@
 
 	#artwork-doctor {
 		@apply h-full w-fit max-w-full max-h-full object-cover absolute -z-10 bottom-0 right-10;
+	}
+
+	#artwork-card {
+		@apply h-52 w-fit object-cover absolute -z-20  top-32 left-7;
 	}
 </style>
