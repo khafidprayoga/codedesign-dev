@@ -37,14 +37,13 @@
 <style lang='postcss'>
     *  {
         /* border: 1px solid red; */
-        @apply text-sm
+        @apply text-sm 
     }
 
     .navigation {
         @apply 
-        
         flex w-full justify-between items-center absolute
-        py-2
+        py-2 
     }
 
     .navigation-left img {
@@ -67,11 +66,14 @@
         @apply font-semibold
     }
 
+    .navigation-center  ul li:not(.active){
+        @apply font-thin
+    }
     .navigation-right {
         @apply flex flex-row gap-4 font-semibold
     }
 
     .navigation-right span.bordered {
-        @apply border border-black rounded-sm
+        @apply border border-black rounded-sm px-3
     }
 </style>
