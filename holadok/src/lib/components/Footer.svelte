@@ -38,16 +38,19 @@
 <style lang="postcss">
 
     .footer {
-		@apply flex flex-row justify-between gap-3 bg-primary text-gray-100 rounded-sm;
+		@apply flex flex-col flex-wrap md:flex-nowrap sm:flex-row justify-between gap-3 text-center sm:text-left bg-primary text-gray-100 rounded-sm
+        max-w-screen-sm
+        sm:max-w-fit;
 	}
 
 	.footer div {
-		@apply flex flex-row gap-1  px-10 py-10;
+		@apply flex flex-col sm:flex-row gap-1  sm:px-10 py-10 font-sans;
 	}
 
 	.footer > div > i {
-		@apply py-1;
+		@apply self-center sm:py-1;
 	}
+
 	.footer > div > div {
 		@apply flex flex-col px-5 py-1;
 	}

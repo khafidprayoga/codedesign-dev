@@ -15,7 +15,7 @@
 	}
 
 	.wrapper {
-		@apply flex flex-col relative mx-auto  pt-5 pb-5 h-screen
-        w-8/12;
+		@apply flex flex-col md:relative mx-auto pt-5 pb-5 h-screen
+        sm:w-8/12 relative;
 	}
 </style>

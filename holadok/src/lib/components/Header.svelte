@@ -41,7 +41,7 @@
 
     .navigation {
         @apply 
-        flex w-full justify-between items-center absolute
+        md:flex md:w-full  md:justify-between md:items-center h-screen md:h-0 absolute
         py-2 px-2 z-10
     }
 
@@ -52,8 +52,9 @@
     .navigation-center > ul , .navigation-right > span  {
         @apply px-1 py-1
     }
+
     .navigation-center  ul {
-        @apply flex flex-row gap-4
+        @apply hidden md:flex flex-row gap-4
     }
 
     .navigation-center  ul li:hover {
@@ -69,7 +70,7 @@
         @apply font-thin
     }
     .navigation-right {
-        @apply flex flex-row gap-4 font-semibold
+        @apply hidden md:flex flex-row gap-4 font-semibold
     }
 
     .navigation-right span.bordered {

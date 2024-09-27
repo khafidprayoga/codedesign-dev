@@ -27,7 +27,7 @@
 
 <style lang="postcss">
 	.hero {
-		@apply h-full flex flex-row flex-1 justify-between items-center;
+		@apply min-h-screen  min-w-full flex flex-col mt-16 px-5 sm:px-0 sm:m-0 sm:flex-row flex-1 justify-between items-center;
 	}
 
 	.hero-tagline {
@@ -35,30 +35,30 @@
 	}
 
 	.hero-header {
-		@apply text-5xl font-light text-gray-900;
+		@apply text-3xl md:text-5xl font-light text-gray-900;
 	}
 
 	.hero-description {
-		@apply text-lg font-thin text-gray-700;
+		@apply text-sm md:text-lg font-thin text-gray-700;
 	}
 
 	.hero-action {
-		@apply bg-primary bg-opacity-90 text-white py-3 px-1 text-center font-thin rounded-sm w-1/3;
+		@apply bg-primary bg-opacity-90 text-white py-3 px-1 text-center md:text-base font-thin rounded-sm w-full lg:w-1/3;
 	}
 
 	.hero-artwork {
-		@apply w-full h-full relative overflow-hidden;
+		@apply mt-5 md:mt-0 md:w-full h-full relative  overflow-hidden select-none;
 	}
 
 	#artwork-overlay {
-		@apply absolute -z-20 top-0 -right-0;
+		@apply  xl:block bg-no-repeat sm:absolute -z-50 top-0 -right-0;
 	}
 
 	#artwork-doctor {
-		@apply h-full w-fit max-w-full max-h-full object-cover absolute -z-10 bottom-0 right-10;
+		@apply  md:max-h-[720px] w-fit  object-cover absolute z-10 bottom-0 md:right-10;
 	}
 
 	#artwork-card {
-		@apply h-52 w-fit object-cover absolute -z-20  top-32 left-7;
+		@apply   w-[225px] md:h-52 md:w-fit object-cover absolute z-[9]  top-0 md:top-64 md:left-0;
 	}
 </style>
