@@ -1,10 +1,12 @@
 <script lang="ts">
+	import TypeWriter from 'svelte-typewriter';
+
 	import doctor from '$lib/assets/brand/doctor.svg';
 	import overlay from '$lib/assets/brand/background.svg';
 	import card from '$lib/assets/brand/card.svg';
 
 	import { fly, fade } from 'svelte/transition';
-	import { quadIn, quintOut } from 'svelte/easing';
+	import { linear, quadIn } from 'svelte/easing';
 
 	import { onMount } from 'svelte';
 
@@ -12,17 +14,25 @@
 	onMount(() => {
 		ready = true;
 	});
+
+	const typeWriterProp = {
+		interval: 21,
+		mode: 'concurrent',
+		cursor: true
+	};
 </script>
 
 <div class="hero">
 	{#if ready}
-		<div class="hero-tagline" transition:fade={{ delay: 0, duration: 100, easing: quadIn }}>
+		<div class="hero-tagline">
 			<h1 class="hero-header">Get the healthcare you need, when you need it.</h1>
 
-			<p class="hero-description">
-				Manage all of your healthcare needs in one convenient place – from booking appointments to
-				tracking your health history.
-			</p>
+			<TypeWriter {...typeWriterProp}>
+				<p class="hero-description">
+					Manage all of your healthcare needs in one convenient place – from booking appointments to
+					tracking your health history.
+				</p>
+			</TypeWriter>
 			<div class="hero-action">
 				<span>
 					<a href="#">Book an Appointment</a>
@@ -37,16 +47,21 @@
 				id="artwork-doctor"
 				src={doctor}
 				alt="Holadoc Doctor Consultant"
-				transition:fly={{ delay: 0, duration: 3000, x: 200, y: 0, opacity: 1, easing: quintOut }}
+				transition:fade={{ delay: 300, duration: 1500, easing: linear }}
 			/>
 			<img
 				id="artwork-card"
 				src={card}
 				alt="what people say"
-				transition:fly={{ delay: 0, duration: 3000, x: 0, y: -200, opacity: 1, easing: quintOut }}
+				transition:fly={{ delay: 3000, duration: 1500, x: 0, y: -500, opacity: 1, easing: quadIn }}
+			/>
+			<img
+				id="artwork-overlay"
+				src={overlay}
+				alt="Overlay background"
+				transition:fly={{ delay: 0, duration: 250, x: 0, y: -50, opacity: 1, easing: quadIn }}
 			/>
 		{/if}
-		<img id="artwork-overlay" src={overlay} alt="Overlay background" />
 	</div>
 </div>
 
