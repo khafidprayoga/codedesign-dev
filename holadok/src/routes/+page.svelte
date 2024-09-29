@@ -11,11 +11,9 @@
 </div>
 
 <style lang="postcss">
-	* {
-	}
 
 	.wrapper {
-		@apply flex flex-col md:relative mx-auto pt-5 pb-5 h-screen
+		@apply flex flex-col mx-auto mt-2 md:mt-10  h-screen
         sm:w-8/12 relative;
 	}
 </style>

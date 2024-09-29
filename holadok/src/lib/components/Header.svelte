@@ -5,6 +5,7 @@
 <div class="navigation">
 	<div class="navigation-left">
 		<img src={Logo} alt="Holadok Brand Logo" />
+		<h1>Holadok</h1>
 	</div>
 	<nav class="navigation-center">
 		<ul>
@@ -39,21 +40,27 @@
 	}
 
 	.navigation {
-		@apply md:flex md:w-full  md:justify-between md:items-center h-screen md:h-0 absolute
-        py-2 md:py-5 px-2 z-10;
+		@apply md:flex w-full  md:justify-between md:items-center h-screen md:h-0 sm:absolute z-10 py-2;
 	}
 
 	.navigation-left img {
-		@apply w-full h-7;
+		@apply hidden sm:inline  ;
 	}
 
+	.navigation-left h1 {
+		@apply sm:hidden text-center text-2xl font-extrabold;
+	}
+
+	.navigation-center{
+		@apply hidden md:block
+	}
 	.navigation-center > ul,
 	.navigation-right > span {
 		@apply px-1 py-1;
 	}
 
 	.navigation-center ul {
-		@apply hidden md:flex flex-row gap-4;
+		@apply md:flex flex-row gap-4;
 	}
 
 	.navigation-center ul li:hover {

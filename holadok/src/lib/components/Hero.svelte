@@ -67,7 +67,7 @@
 
 <style lang="postcss">
 	.hero {
-		@apply min-h-screen  min-w-full flex flex-col mt-16 px-5 sm:px-0 sm:m-0 sm:flex-row flex-1 justify-between items-center;
+		@apply sm:min-h-screen  min-w-full flex flex-col px-5 sm:px-0 sm:m-0 sm:flex-row flex-1 justify-between items-center;
 	}
 
 	.hero-tagline {
