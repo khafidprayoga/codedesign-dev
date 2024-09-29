@@ -2,26 +2,51 @@
 	import doctor from '$lib/assets/brand/doctor.svg';
 	import overlay from '$lib/assets/brand/background.svg';
 	import card from '$lib/assets/brand/card.svg';
+
+	import { fly, fade } from 'svelte/transition';
+	import { quadIn, quintOut } from 'svelte/easing';
+
+	import { onMount } from 'svelte';
+
+	let ready = false;
+	onMount(() => {
+		ready = true;
+	});
 </script>
 
 <div class="hero">
-	<div class="hero-tagline">
-		<h1 class="hero-header">Get the healthcare you need, when you need it.</h1>
-		<p class="hero-description">
-			Manage all of your healthcare needs in one convenient place – from booking appointments to
-			tracking your health history.
-		</p>
-		<div class="hero-action">
-			<span>
-				<a href="#">Book an Appointment</a>
-			</span>
+	{#if ready}
+		<div class="hero-tagline" transition:fade={{ delay: 0, duration: 100, easing: quadIn }}>
+			<h1 class="hero-header">Get the healthcare you need, when you need it.</h1>
+
+			<p class="hero-description">
+				Manage all of your healthcare needs in one convenient place – from booking appointments to
+				tracking your health history.
+			</p>
+			<div class="hero-action">
+				<span>
+					<a href="#">Book an Appointment</a>
+				</span>
+			</div>
 		</div>
-	</div>
+	{/if}
 
 	<div class="hero-artwork">
-		<img id="artwork-doctor" src={doctor} alt="Holadoc Doctor Consultant" />
+		{#if ready}
+			<img
+				id="artwork-doctor"
+				src={doctor}
+				alt="Holadoc Doctor Consultant"
+				transition:fly={{ delay: 0, duration: 3000, x: 200, y: 0, opacity: 1, easing: quintOut }}
+			/>
+			<img
+				id="artwork-card"
+				src={card}
+				alt="what people say"
+				transition:fly={{ delay: 0, duration: 3000, x: 0, y: -200, opacity: 1, easing: quintOut }}
+			/>
+		{/if}
 		<img id="artwork-overlay" src={overlay} alt="Overlay background" />
-		<img id="artwork-card" src={card} alt="what people say" />
 	</div>
 </div>
 
@@ -51,14 +76,14 @@
 	}
 
 	#artwork-overlay {
-		@apply  xl:block bg-no-repeat sm:absolute -z-50 top-0 -right-0;
+		@apply xl:block bg-no-repeat sm:absolute -z-50 top-0 -right-0;
 	}
 
 	#artwork-doctor {
-		@apply  md:max-h-[720px] w-fit  object-cover absolute z-10 bottom-0 md:right-10;
+		@apply md:max-h-[720px] w-fit  object-cover absolute z-10 bottom-0 md:right-10;
 	}
 
 	#artwork-card {
-		@apply   w-[225px] md:h-52 md:w-fit object-cover absolute z-[9]  top-0 md:top-64 md:left-0;
+		@apply w-[225px] md:h-52 md:w-fit object-cover absolute z-[9]  top-0 md:top-64 md:left-0;
 	}
 </style>
