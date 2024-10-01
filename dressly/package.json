@@ -1,0 +1,34 @@
+{
+  "name": "rsbuild-svelte-ts",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rsbuild build",
+    "dev": "rsbuild dev --open",
+    "format": "prettier --write .",
+    "lint": "eslint .",
+    "preview": "rsbuild preview",
+    "svelte-check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "dependencies": {
+    "svelte": "^4.2.19"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.10.0",
+    "@rsbuild/core": "^1.0.1",
+    "@rsbuild/plugin-svelte": "^1.0.1",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.10.0",
+    "eslint-plugin-svelte": "^2.43.0",
+    "globals": "^15.9.0",
+    "postcss": "^8.4.47",
+    "postcss-load-config": "^6.0.1",
+    "postcss-loader": "^8.1.1",
+    "prettier": "^3.3.3",
+    "svelte-check": "^4.0.1",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.5.2",
+    "typescript-eslint": "^8.5.0"
+  },
+  "type": "module"
+}
