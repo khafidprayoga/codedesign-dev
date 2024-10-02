@@ -8,8 +8,8 @@
   import { isModalMenuOpen } from '@store/mobile';
 </script>
 
-<nav>
-  <div class="px-4 sm:px-6 lg:px-8">
+<nav class="sticky top-0 z-[100] bg-gray-50 md:static md:bg-inherit">
+  <div class="px-2 sm:px-4 md:px-0">
     <div class="flex items-center justify-between h-16">
       <!-- Mobile: Hamburger menu (left) -->
      <HamburgerMenu/>

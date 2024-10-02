@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "rsbuild build",
+    "build": "NODE_ENV=production rsbuild build",
     "dev": "rsbuild dev --open",
     "format": "prettier --write .",
     "lint": "eslint .",
