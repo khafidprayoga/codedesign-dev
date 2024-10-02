@@ -11,6 +11,7 @@
     "svelte-check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
+    "lucide-svelte": "^0.447.0",
     "svelte": "^4.2.19"
   },
   "devDependencies": {
