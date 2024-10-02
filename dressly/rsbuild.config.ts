@@ -13,5 +13,8 @@ export default defineConfig({
   html: {
     title: 'DressLy - Discover the Latest Fashion Trends',
     favicon: './public/favicon.png',
+    meta:{
+      description: 'DressLy is a fashion discovery platform that helps you find the latest fashion trends and styles.',
+    }
   },
 });
