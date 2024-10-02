@@ -1,24 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/**/*.{html,ts,svelte}',
-  ],
+  content: ['./src/**/*.{html,ts,svelte}'],
   theme: {
     extend: {
-      colors:{
+      colors: {
         background: {
-          100: "#FDFDFD",
+          100: '#FDFDFD',
         },
         primary: {
-          300: "#F5CCAB",
-          500: "#E09370",
+          300: '#F5CCAB',
+          500: '#E09370',
         },
       },
-      fontFamily:{
+      fontFamily: {
         Lora: ['Lora', 'serif'],
-        OpenSans: ["Open Sans", "sans-serif"],
-      }
+        OpenSans: ['Open Sans', 'sans-serif'],
+      },
     },
   },
   plugins: [],
-}
+};
