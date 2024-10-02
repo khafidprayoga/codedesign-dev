@@ -49,7 +49,7 @@
   }
 
   #artwork-vector-object {
-    @apply absolute top-[31%] md:top-[21%] left-[-13%] md:left-[-7%] w-[110px] h-20 md:w-24 md:h-24 self-start;
+    @apply absolute top-[21.5%] md:top-[21%] left-[-15%] md:left-[-7%] w-[110px] h-20 md:w-24 md:h-24 self-start;
   }
 
   #artwork-clothes {
