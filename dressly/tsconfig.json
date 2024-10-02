@@ -14,7 +14,13 @@
     "moduleResolution": "bundler",
     "useDefineForClassFields": true,
     "allowImportingTsExtensions": true,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "paths": {
+      "@artwork/*": ["./src/assets/artwork/*"],
+      "@brand/*": ["./src/assets/brand/*"],
+      "@icons/*": ["./src/assets/icons/*"],
+      "@components/*": ["./src/components/*"],
+    }
   },
   "include": ["src"],
 }
