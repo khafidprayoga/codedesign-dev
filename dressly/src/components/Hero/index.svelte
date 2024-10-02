@@ -6,7 +6,7 @@
   <div id="artwork">
     <img id="artwork-vector-rule" src={rules} alt="Hero Artwork - Ruler" />
     <img id="artwork-vector-object" src={object} alt="Hero Artwork - Vector Object" />
-    <img id="artwork-clothes" src={hero} alt="Hero Artwork - Clothes" />
+    <img id="artwork-clothes" src={hero} alt="Hero Artwork - Clothes" fetchpriority="high"/>
   </div>
   <div id="cta">
     <h1 id="cta-title">Discover the Latest Fashion Trends</h1>
@@ -32,7 +32,7 @@
   }
 
   #hero {
-    @apply pt-5 flex flex-col gap-5 md:flex-row-reverse h-screen md:justify-center md:items-center relative;
+    @apply md:mt-10 md:pt-5 flex flex-col gap-5 md:flex-row-reverse h-screen md:justify-center md:items-center relative;
   }
 
   #hero > div {
@@ -40,20 +40,24 @@
   }
   
   #artwork {
-    @apply flex flex-col relative;
+    @apply sm:flex sm:flex-col relative   select-none
+    min-h-[420px] min-[450px]:min-h-[490px] min-[490px]:min-h-[560px] sm:min-h-[570px] 
+    md:min-h-full
+    ; 
   }
 
 
   #artwork-vector-rule {
-    @apply  absolute top-0 left-0 self-start w-24 h-24 md:w-auto md:h-auto;
+    @apply  absolute top-0 left-0 md:w-auto md:h-auto;
   }
 
   #artwork-vector-object {
-    @apply absolute top-[21.5%] md:top-[21%] left-[-15%] md:left-[-7%] w-[110px] h-20 md:w-24 md:h-24 self-start;
+    @apply absolute top-[125px] left-[-25px] md:w-auto md:h-auto;
+    
   }
 
   #artwork-clothes {
-    @apply  bottom-0 right-0 self-end;
+    @apply  absolute top-0 right-0 md:h-full;
   }
 
   #cta {
