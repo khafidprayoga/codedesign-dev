@@ -13,6 +13,10 @@ module.exports = {
           300: "#F5CCAB",
           500: "#E09370",
         },
+      },
+      fontFamily:{
+        Lora: ['Lora', 'serif'],
+        OpenSans: ["Open Sans", "sans-serif"],
       }
     },
   },

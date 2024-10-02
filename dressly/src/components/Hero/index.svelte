@@ -32,7 +32,7 @@
   }
 
   #hero {
-    @apply md:mt-10 md:pt-5 flex flex-col gap-5 md:flex-row-reverse h-screen md:justify-center md:items-center relative;
+    @apply md:mt-10 md:py-5 flex flex-col gap-5 md:flex-row-reverse h-screen md:justify-center md:items-center relative;
   }
 
   #hero > div {
@@ -61,11 +61,11 @@
   }
 
   #cta {
-    @apply flex flex-col gap-5;
+    @apply font-OpenSans flex flex-col gap-5;
   }
 
   #cta-title {
-    @apply font-serif text-5xl md:text-7xl;
+    @apply font-Lora text-5xl md:text-7xl;
   }
 
   .cta-description {
