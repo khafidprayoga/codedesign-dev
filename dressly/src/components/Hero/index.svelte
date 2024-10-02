@@ -4,9 +4,9 @@
 
 <div id="hero">
   <div id="artwork">
-    <img id="artwork-vector-rule" src={rules} alt="Hero Artwork - Ruler" />
-    <img id="artwork-vector-object" src={object} alt="Hero Artwork - Vector Object" />
-    <img id="artwork-clothes" src={hero} alt="Hero Artwork - Clothes" fetchpriority="high"/>
+    <img class="lazy" id="artwork-vector-rule" src={rules} alt="Hero Artwork - Ruler" />
+    <img class="lazy" id="artwork-vector-object" src={object} alt="Hero Artwork - Vector Object" />
+    <img class="lazy" id="artwork-clothes" src={hero} alt="Hero Artwork - Clothes" fetchpriority="high"/>
   </div>
   <div id="cta">
     <h1 id="cta-title">Discover the Latest Fashion Trends</h1>
@@ -73,6 +73,6 @@
   }
 
   #cta-action{
-    @apply bg-primary-500 w-full text-black font-semibold px-5 py-3 rounded-md md:w-1/2;
+    @apply bg-primary-500 hover:bg-primary-300 w-full text-black font-semibold px-5 py-3 rounded-md md:w-1/2;
   }
 </style>
