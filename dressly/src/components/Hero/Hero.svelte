@@ -32,7 +32,7 @@
   }
 
   #hero {
-    @apply md:mt-10 md:py-5 flex flex-col gap-5 md:flex-row-reverse h-screen md:justify-center md:items-center relative;
+    @apply md:mt-10 md:py-5 flex flex-col gap-5 md:flex-row-reverse h-screen md:justify-center md:items-center relative min-h-fit;
   }
 
   #hero > div {
