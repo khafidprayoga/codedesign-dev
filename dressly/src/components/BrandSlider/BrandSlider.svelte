@@ -7,6 +7,7 @@
     balenciaga,
     louisVuitton,
   } from '@brand/index';
+  import { Marquee } from '@selemondev/svelte-marquee';
 
   const brands = [
     {
@@ -34,15 +35,40 @@
       image: louisVuitton,
     },
   ];
+
+  let animateSponsor = false;
+  // Update the state based on window size
+  const updateSponsorAnimation = () => {
+    if (window.innerWidth < 640) { // 640px is the 'sm' breakpoint in Tailwind
+      animateSponsor = false;
+    } else {
+      animateSponsor = true;
+    }
+  };
+
 </script>
 
-<div id="brand-slider">
-  {#each brands as { name, image }}
-    <div class="brand-wrapper">
-      <img src={image} alt={`Brand ${name}`} class="drop-shadow-2xl" />
-    </div>
-  {/each}
-</div>
+<Marquee
+  class="gap-[3rem] [--duration:10s] [--gap:3rem] md:w-[800px] mx-auto overflow-x-hidden"
+  direction="left"
+  fade={true}
+  reverse={false}
+  pauseOnHover={true}
+  innerClassName="gap-[3rem]"
+>
+  <div id="brand-slider">
+    {#each brands as { name, image }}
+      <div class="brand-wrapper">
+        <img
+          src={image}
+          alt={`Brand ${name}`}
+          class="drop-shadow-2xl select-none"
+        />
+      </div>
+    {/each}
+  </div>
+</Marquee>
+
 
 <style lang="postcss">
   * {
