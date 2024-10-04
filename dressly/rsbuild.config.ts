@@ -1,6 +1,9 @@
-import { defineConfig } from '@rsbuild/core';
+import { RsbuildConfig, defineConfig, loadEnv } from '@rsbuild/core';
 import { pluginSvelte, PluginSvelteOptions } from '@rsbuild/plugin-svelte';
 import { pluginImageCompress } from "@rsbuild/plugin-image-compress";
+
+const { parsed, publicVars } = loadEnv();
+
 
 const svelteConfig: PluginSvelteOptions = {
   svelteLoaderOptions: {},
@@ -10,7 +13,7 @@ const svelteConfig: PluginSvelteOptions = {
 };
 
 
-export default defineConfig({
+const Config: RsbuildConfig = {
   plugins: [pluginSvelte(svelteConfig), pluginImageCompress(['png','svg'])],
   html: {
     title: 'DressLy - Discover the Latest Fashion Trends',
@@ -29,5 +32,10 @@ export default defineConfig({
   },
   output:{
     polyfill: 'usage',
-  }
-});
+  },
+  source: {
+    define: parsed,
+  },
+}
+
+export default defineConfig(Config);

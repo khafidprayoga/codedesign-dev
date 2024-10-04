@@ -20,7 +20,8 @@
       "@brand/*": ["./src/assets/brand/*"],
       "@icons/*": ["./src/assets/icons/*"],
       "@components/*": ["./src/components/*"],
-      "@store/*": ["./src/store/*"]
+      "@store/*": ["./src/store/*"],
+      "@config/*": ["./src/config/*"]
     }
   },
   "include": ["src"]
