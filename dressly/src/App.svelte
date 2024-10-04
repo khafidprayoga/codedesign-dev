@@ -1,11 +1,19 @@
 <script lang="ts">
-  import { Header, Hero, BrandSlider } from '@components/index';
+  import {
+    Header,
+    Hero,
+    BrandSlider,
+    Newsletter,
+    Footer,
+  } from '@components/index';
 </script>
 
-<div class="pt-3 mx-auto md:w-10/12">
+<div class="py-2 mx-auto md:w-10/12 px-4 md:px-0">
   <Header />
-  <main class="px-4 md:px-0">
+  <main>
     <Hero />
     <BrandSlider />
   </main>
+  <Newsletter />
+  <Footer />
 </div>

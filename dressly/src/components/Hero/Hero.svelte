@@ -57,7 +57,7 @@
   }
 
   #artwork-clothes {
-    @apply  absolute top-0 right-0 md:h-full;
+    @apply  absolute top-0 right-0 md:h-full max-h-[550px] md:max-h-full;
   }
 
   #cta {

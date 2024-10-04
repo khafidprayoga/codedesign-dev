@@ -52,8 +52,8 @@
   class="gap-[3rem] [--duration:10s] [--gap:3rem] md:w-[800px] mx-auto overflow-x-hidden"
   direction="left"
   fade={true}
-  reverse={false}
-  pauseOnHover={true}
+  reverse={true}
+  pauseOnHover={false}
   innerClassName="gap-[3rem]"
 >
   <div id="brand-slider">
@@ -62,7 +62,7 @@
         <img
           src={image}
           alt={`Brand ${name}`}
-          class="drop-shadow-2xl select-none"
+          class="drop-shadow-md select-none"
         />
       </div>
     {/each}
@@ -76,7 +76,7 @@
   }
 
   #brand-slider {
-    @apply my-10 grid grid-rows-2 grid-cols-2 md:grid-rows-1 md:grid-cols-6;
+    @apply mt-10 grid grid-rows-2 grid-cols-2 md:grid-rows-1 md:grid-cols-6;
   }
 
   .brand-wrapper {
