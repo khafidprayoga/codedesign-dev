@@ -1,9 +1,11 @@
 import headerComponent from './Header/Header.svelte';
 import heroComponent from './Hero/Hero.svelte';
 import brandSliderComponent from './BrandSlider/BrandSlider.svelte';
+import contentComponent from './Content/Content.svelte';
 import stepperComponent from "./Stepper/Stepper.svelte";
 import newsletterComponent from './NewsLetter/NewsLetter.svelte';
 import footerComponent from "./Footer/Footer.svelte";
+import categoryComponent from "./Category/Category.svelte";
 
 export {
     headerComponent as Header,
@@ -11,5 +13,7 @@ export {
     brandSliderComponent as BrandSlider,
     newsletterComponent as Newsletter,
     footerComponent as Footer,
-    stepperComponent as Stepper
+    stepperComponent as Stepper,
+    contentComponent as Content,
+    categoryComponent as Category
 };

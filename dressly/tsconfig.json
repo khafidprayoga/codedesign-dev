@@ -21,7 +21,8 @@
       "@icons/*": ["./src/assets/icons/*"],
       "@components/*": ["./src/components/*"],
       "@store/*": ["./src/store/*"],
-      "@config/*": ["./src/config/*"]
+      "@config/*": ["./src/config/*"],
+      "@assets/*": ["./src/assets/*"]
     }
   },
   "include": ["src"]
