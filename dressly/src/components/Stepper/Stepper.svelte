@@ -59,10 +59,10 @@
   }
 
   .step-line-desktop {
-    @apply w-28 h-0 border-2 border-primary-200 border-dashed  my-12 hidden xl:inline;
+    @apply w-28 h-0 border-2 border-primary-700 border-dashed  my-12 hidden xl:inline;
   }
 
   .step-line-mobile {
-    @apply inline w-28 h-0 border-2 border-primary-200 border-dashed rotate-90 my-12 xl:hidden;
+    @apply inline w-28 h-0 border-2 border-primary-700 border-dashed rotate-90 my-12 xl:hidden;
   }
 </style>
