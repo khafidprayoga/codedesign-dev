@@ -13,6 +13,7 @@ module.exports = {
           100: '#FDFDFD',
         },
         primary: {
+          200: '#FBE3C9',
           300: '#F5CCAB',
           500: '#E09370',
         },

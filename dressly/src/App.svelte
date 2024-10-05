@@ -3,6 +3,7 @@
     Header,
     Hero,
     BrandSlider,
+    Stepper,
     Newsletter,
     Footer,
   } from '@components/index';
@@ -13,6 +14,7 @@
   <main>
     <Hero />
     <BrandSlider />
+    <Stepper />
   </main>
   <Newsletter />
   <Footer />
