@@ -12,7 +12,7 @@
 <div id="order-step">
   <h2>The Easiest Way to Order</h2>
   <div class="pb-10">
-    <div class="steps">
+    <div class="steps ">
       {#each orderSteps as step, i}
         <div class="step-wrapper">
           <div class="step-container">
@@ -21,7 +21,7 @@
             {#if i < orderSteps.length - 1}
               <hr class="step-line-desktop" />
             {:else}
-              <hr class="step-line-desktop invisible" />
+               <span class="xl:my-12"></span>
             {/if}
           </div>
           {#if i < orderSteps.length - 1}
@@ -43,11 +43,11 @@
   }
 
   .steps {
-    @apply font-OpenSans text-lg md:text-xl flex flex-col md:flex-row gap-4 w-full px-4 font-medium;
+    @apply font-OpenSans text-lg md:text-xl flex flex-col xl:flex-row gap-4 w-full px-4 font-medium;
   }
 
   .step-wrapper {
-    @apply flex flex-col items-center md:flex-row md:items-start md:gap-3 justify-center;
+    @apply flex flex-col items-center xl:flex-row md:items-start md:gap-3 justify-center;
   }
 
   .step-container {
@@ -59,10 +59,10 @@
   }
 
   .step-line-desktop {
-    @apply w-28 h-0 border-2 border-primary-200 border-dashed  my-12 hidden lg:inline;
+    @apply w-28 h-0 border-2 border-primary-200 border-dashed  my-12 hidden xl:inline;
   }
 
   .step-line-mobile {
-    @apply inline w-28 h-0 border-2 border-primary-200 border-dashed rotate-90 my-12 lg:hidden;
+    @apply inline w-28 h-0 border-2 border-primary-200 border-dashed rotate-90 my-12 xl:hidden;
   }
 </style>
