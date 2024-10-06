@@ -1,9 +1,9 @@
 <script lang="ts">
 	import TypeWriter from 'svelte-typewriter';
 
-	import doctor from '$lib/assets/brand/doctor.svg';
+	import doctor from '$lib/assets/brand/doctor.webp';
 	import overlay from '$lib/assets/brand/background.svg';
-	import card from '$lib/assets/brand/card.svg';
+	import card from '$lib/assets/brand/card.webp';
 
 	import { fly, fade } from 'svelte/transition';
 	import { linear, quadIn } from 'svelte/easing';
