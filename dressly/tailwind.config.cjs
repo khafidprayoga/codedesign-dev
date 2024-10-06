@@ -18,6 +18,9 @@ module.exports = {
           500: '#E09370',
           700: '#A14B38',
         },
+        warning: {
+          500: '#FFC83D',
+        }
       },
       fontFamily: {
         Lora: ['Lora', 'serif'],
